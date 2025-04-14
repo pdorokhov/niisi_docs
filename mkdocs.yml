@@ -16,3 +16,12 @@ theme:
 
 plugins:
   - search
+  - encryptcontent:
+      password_file: 'passwords.yml'
+      title_prefix: ''
+      summary: ''
+      remember_keys: true
+      remember_password: true
+      esm: true # ('Эта настройка помогла при появлении страницы с запросом пароля на милисекунду')
+
+
