@@ -21,7 +21,7 @@ plugins:
         secret:
           # Берём пароль из переменной окружения ENCRYPT_PASSWORD
           # Если её нет, используем fallback (опционально)
-          dorokhov: !ENV NIISI_PASS
+            dorokhov: !ENV [NIISI_PASS, '']
       title_prefix: ''
       summary: ''
       remember_keys: true

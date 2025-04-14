@@ -22,17 +22,19 @@ jobs:
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
-          github_token: ${{ secrets.NIISI_PASS }}
           path: .cache 
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
       - run: pip install mkdocs-encryptcontent-plugin
+      #- run: echo "NIISI_PASS is set: $NIISI_PASS"  # Отладочный вывод
+        env:
+          NIISI_PASS: ${{ secrets.NIISI_PASS }}
+      - run: mkdocs build
+        env:
+          NIISI_PASS: ${{ secrets.NIISI_PASS }}
       - run: mkdocs gh-deploy --force
         env:
           NIISI_PASS: ${{ secrets.NIISI_PASS }}
-      
-   
-       
 
    
