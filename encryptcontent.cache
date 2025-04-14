@@ -1,5 +1,0 @@
-kdf_iterations: 10000
-obfuscate: {}
-password:
-  '!ENV': d5d164845d1278b51e480aa9ac67dd3d62abaaf1dccaf5f37d92f3d053fc5481;0419131c4dd774ae45df11abdee78365;92afbdde59b84950297d178235c1c8db793878f3c4fb952233ec8e9d78020852
-userpass: {}
