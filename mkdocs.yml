@@ -16,3 +16,14 @@ theme:
 
 plugins:
   - search
+  - encryptcontent:
+      title_prefix: ''
+      summary: ''
+      password_inventory:
+            secret:
+                user1: !ENV NIISI_PASS
+      remember_keys: true
+      remember_password: true
+      esm: true # ('Эта настройка помогла при появлении страницы с запросом пароля на милисекунду')
+
+
