@@ -1,31 +1,77 @@
 site_name: ИНФОРМАЦИОННЫЙ ПОРТАЛ НИЦ "Курчатовский институт" - НИИСИ
 theme:
   name: material
+  logo: assets/logo_niisi.png
   language: ru
   features:
       - navigation.instant
       - navigation.tabs
       - content.tabs.link
-   
+    # - navigation.sections
+    # - navigation.indexes
+    # - navigation.expand
+    # - toc.integrate
   palette:
     - scheme:  default
       primary: indigo
       accent:  blue
 
 
+nav:
+  - Багет ПЛК 1:
+    - Модули процессорные БТ75-20х:
+        - БТ75-201:  plc1/hardware/bt75-201.md
+        - БТ75-201А: plc1/hardware/bt75-201a.md
+        - БТ75-201Б: plc1/hardware/bt75-201b.md
+        - БТ75-201В: plc1/hardware/bt75-201v.md
+    - Модули коммутационные БТ75-25х:
+        - БТ75-251:  plc1/hardware/bt75-251.md
+        - БТ75-251A:  plc1/hardware/bt75-251a.md
+    - Модули ввода-вывода БТ75-40х:
+        - БТ75-401:  plc1/hardware/bt75-401.md
+        - БТ75-402:  plc1/hardware/bt75-402.md
+        - БТ75-403:  plc1/hardware/bt75-403.md
+        - БТ75-403A:  plc1/hardware/bt75-403a.md
+        - БТ75-403Б:  plc1/hardware/bt75-403b.md
+        - БТ75-404:  plc1/hardware/bt75-404.md
+        - БТ75-404А:  plc1/hardware/bt75-404a.md
+        - БТ75-405:  plc1/hardware/bt75-405.md
+        - БТ75-405А:  plc1/hardware/bt75-405a.md
+        - БТ75-406:  plc1/hardware/bt75-406.md
+        - БТ75-407:  plc1/hardware/bt75-407.md
+        - БТ75-408:  plc1/hardware/bt75-408.md
+        - БТ75-409:  plc1/hardware/bt75-409.md
+    - Потребляемая мощность модулей: plc1/power_consumption/index.md
+         
+  - Багет ПЛК 2:
+    - Характеристики модулей:
+        - БТ76-201:  plc2/hardware/bt76-201.md
+        - БТ76-401:  plc2/hardware/bt76-401.md
+        - БТ76-402:  plc2/hardware/bt76-402.md
+      
 
 plugins:
   - search
-  - encryptcontent:
-      password_inventory:
-        secret:
-          # Берём пароль из переменной окружения ENCRYPT_PASSWORD
-          # Если её нет, используем fallback (опционально)
-            pdorokhov: !ENV NIISI_PASS
-      title_prefix: ''
-      summary: ''
-      remember_keys: true
-      remember_password: true
-      esm: true # ('Эта настройка помогла при появлении страницы с запросом пароля на милисекунду')
+  # - encryptcontent:
+      # title_prefix: ''
+      # summary: ''
+      # global_password: '****'
+      # remember_keys: true
+      # remember_password: true
+      # esm: true # ('работает только на localhost')
+     
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - toc:
+     permalink: true
+
 
 
