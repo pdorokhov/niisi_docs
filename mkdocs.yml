@@ -1,4 +1,4 @@
-site_name: !ENV NIISI_PASS # ИНФОРМАЦИОННЫЙ ПОРТАЛ НИЦ "Курчатовский институт" - НИИСИ
+site_name: ИНФОРМАЦИОННЫЙ ПОРТАЛ НИЦ "Курчатовский институт" - НИИСИ
 theme:
   name: material
   logo: assets/logo_niisi.png
