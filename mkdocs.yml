@@ -52,13 +52,14 @@ nav:
 
 plugins:
   - search
-  # - encryptcontent:
-      # title_prefix: ''
-      # summary: ''
-      # global_password: '****'
-      # remember_keys: true
-      # remember_password: true
-      # esm: true # ('работает только на localhost')
+  - encryptcontent:
+      password_file: 'docs/pass.yml'
+      title_prefix: ''
+      summary: ''
+      # global_password: !ENV NIISI_PASS:
+      remember_keys: true
+      remember_password: true
+      esm: true # ('работает только на localhost')
      
 markdown_extensions:
   - admonition
