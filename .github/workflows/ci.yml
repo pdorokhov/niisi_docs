@@ -29,8 +29,8 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material 
       - run: pip install mkdocs-encryptcontent-plugin
-        env:
-          NIISI_PASS: ${{ secrets.NIISI_PASS }}
+        # env:
+        #   NIISI_PASS: ${{ secrets.NIISI_PASS }}
       - run: mkdocs gh-deploy --force
         
 

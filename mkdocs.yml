@@ -56,9 +56,7 @@ plugins:
       # password_file: 'docs/pass.yml'
       title_prefix: ''
       summary: ''
-      password_inventory:
-            secret:
-                pdorokhov: !ENV NIISI_PASS
+      global_password: ${{ secrets.NIISI_PASS }}
       # global_password: !ENV NIISI_PASS:
       remember_keys: true
       remember_password: true
